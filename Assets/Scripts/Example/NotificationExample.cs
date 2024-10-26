@@ -16,18 +16,18 @@ namespace Notification.Example
             clearButton.onClick.AddListener(ClearNotifications);
         }
 
-        void ScheduleTestNotification()
+        private void ScheduleTestNotification()
         {
             NotificationManager.Instance.AddScheduledNotification(
                 "Reminder",
                 "Don't forget to check the app!",
-                1,       // Badge count
-                1,     // Fire in 10 minutes
-                2001     // Notification ID
+                1,
+                1,
+                2001
             );
         }
 
-        void ClearNotifications()
+        private void ClearNotifications()
         {
             NotificationManager.Instance.AllClearNotification();
         }

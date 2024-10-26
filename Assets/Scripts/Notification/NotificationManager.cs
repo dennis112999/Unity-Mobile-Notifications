@@ -57,6 +57,14 @@ namespace Notification
 #endif
         }
 
+        /// <summary>
+        /// Schedules a local notification with specified details.
+        /// </summary>
+        /// <param name="title">The title of the notification</param>
+        /// <param name="message">The message content of the notification</param>
+        /// <param name="badgeCount">The badge count to display on the app icon (if supported)</param>
+        /// <param name="elapsedTime">The delay, in seconds, before the notification is shown</param>
+        /// <param name="notificationId">A unique identifier for the notification, useful for managing or canceling it</param>
         public void AddScheduledNotification(string title, string message, int badgeCount, int elapsedTime, int notificationId)
         {
 #if UNITY_ANDROID
