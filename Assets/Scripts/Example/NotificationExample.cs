@@ -10,6 +10,8 @@ namespace Notification.Example
 
         void Start()
         {
+            NotificationManager.Instance.Initialize();
+
             scheduleButton.onClick.AddListener(ScheduleTestNotification);
             clearButton.onClick.AddListener(ClearNotifications);
         }
@@ -20,7 +22,7 @@ namespace Notification.Example
                 "Reminder",
                 "Don't forget to check the app!",
                 1,       // Badge count
-                600,     // Fire in 10 minutes
+                1,     // Fire in 10 minutes
                 2001     // Notification ID
             );
         }
